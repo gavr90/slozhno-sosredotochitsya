@@ -2,4 +2,91 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--main-background-color);
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(355px, 1fr);
+  grid-template-rows: minmax(238px, 1fr) 1fr 1fr;
+  grid-template-areas: 
+  "menu menu"
+  "title title"
+  ". description";
+  padding: 10px;
+  background-image: url(/images/cover-image-dark.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid #FF0070;
+  border-right: 1px solid #FF0070;
+}
+
+.header::after {
+  content: "rec";
+  position: absolute;
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid #FF0070;
+  border-bottom: 1px solid #FF0070;
+}
+
+.header__theme-menu {
+  grid-area: menu;
+  justify-self: end;
+  align-self: center;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.header__theme-menu-button {
+  inline-size: 70px;
+  block-size: 26px;
+  border: none;
+  color: #FF0070;
+  text-align: center;
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px; /* 100% */
+}
+
+.header__theme-menu-button:active {
+  border: 1px solid #FF0070;
+}
+
+.header__title {
+  grid-area: title;
+  color: #DB00FF;
+  text-shadow: 4px 4px 0px #FF0070;
+  font-family: IBM Plex Mono;
+  font-size: 116px;
+  font-weight: 700;
+  line-height: 82.5%;
+}
+
+.header__description {
+  grid-area: description;
+  background-color: var(--accent-background-color);
+  color: #000028;
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 130%;
 }
