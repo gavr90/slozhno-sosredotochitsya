@@ -33,7 +33,7 @@
 }
 
 .header::after {
-  content: "rec";
+  content: "";
   position: absolute;
   inset-block-end: 10px;
   inset-inline-start: 10px;
@@ -81,7 +81,7 @@
   line-height: 82.5%;
 }
 
-.header__description {
+.subtitle {
   grid-area: description;
   background-color: var(--accent-background-color);
   color: #000028;
@@ -90,3 +90,48 @@
   font-weight: 700;
   line-height: 130%;
 }
+
+.header > .subtitle {
+  margin-block-end: 183px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 10px;
+  gap: 50px;
+}
+
+.content__section-title {
+  color: #FF0070;
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 130%;
+  margin-block-end: 20px;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content__text {
+  color: #F1B2CE;
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 130%;
+  margin-block-start: 10px;
+}
+
+.content__item-title {
+  background-color: var(--accent-background-color);
+  color: #000028;
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 130%;
+}
+
