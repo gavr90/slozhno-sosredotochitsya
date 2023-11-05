@@ -3,22 +3,23 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-color: var(--main-background-color);
+  background-image: url(/images/cover-image-dark.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .header {
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(355px, 1fr);
-  grid-template-rows: minmax(238px, 1fr) 1fr 1fr;
+  grid-template-rows: minmax(238px, 1fr) 1fr min-content;
   grid-template-areas: 
   "menu menu"
   "title title"
   ". description";
   padding: 10px;
-  background-image: url(/images/cover-image-dark.png);
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: center;
 }
 
 .header::before {
@@ -99,16 +100,19 @@
 .header__title {
   grid-area: title;
   color: #DB00FF;
-  text-shadow: 4px 4px 0px #FF0070;
+  text-shadow: 4px 4px 0px var(--accent-color);
   font-family: IBM Plex Mono;
   font-size: 116px;
   font-weight: 700;
   line-height: 82.5%;
 }
 
+.title-decor {
+  background-color: var(--accent-background-color);
+}
+
 .subtitle {
   grid-area: description;
-  background-color: var(--accent-background-color);
   color: #000028;
   font-family: IBM Plex Mono;
   font-size: 18px;
@@ -117,7 +121,7 @@
 }
 
 .header > .subtitle {
-  margin-block-end: 183px;
+  margin-block-end: 66px;
 }
 
 .content {
@@ -152,7 +156,6 @@
 }
 
 .content__item-title {
-  background-color: var(--accent-background-color);
   color: #000028;
   font-family: IBM Plex Mono;
   font-size: 18px;
