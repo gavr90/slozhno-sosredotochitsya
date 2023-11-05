@@ -11,10 +11,11 @@
 }
 
 .header {
+  min-block-size: 668px;
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(355px, 1fr);
-  grid-template-rows: minmax(238px, 1fr) 1fr min-content;
+  grid-template-rows: minmax(228px, 0.92fr) minmax(247px, 1fr) min-content;
   grid-template-areas: 
   "menu menu"
   "title title"
@@ -102,26 +103,27 @@
   color: #DB00FF;
   text-shadow: 4px 4px 0px var(--accent-color);
   font-family: IBM Plex Mono;
-  font-size: 116px;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 82.5%;
 }
 
 .title-decor {
   background-color: var(--accent-background-color);
+  color: #000028;
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  line-height: 130%;
 }
 
 .subtitle {
   grid-area: description;
   color: #000028;
-  font-family: IBM Plex Mono;
-  font-size: 18px;
   font-weight: 700;
-  line-height: 130%;
 }
 
 .header > .subtitle {
-  margin-block-end: 66px;
+  margin-block-end: 56px;
 }
 
 .content {
@@ -155,11 +157,60 @@
   margin-block-start: 10px;
 }
 
-.content__item-title {
-  color: #000028;
-  font-family: IBM Plex Mono;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 130%;
+.content__images-mosaic {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
+.content__image {
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.content__item-title {
+  color: #000028;
+  font-weight: 400;
+}
+
+.footer {
+  min-block-size: 668px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid #FF0070;
+  border-right: 1px solid #FF0070;
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid #FF0070;
+  border-bottom: 1px solid #FF0070;
+}
+
+
+.footer__title {
+  color: #DB00FF;
+  text-shadow: 2px 2px 0px var(--accent-color);
+  font-family: IBM Plex Mono;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 82.5%;
+}
