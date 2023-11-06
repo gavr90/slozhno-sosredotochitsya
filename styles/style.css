@@ -2,8 +2,8 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background-color: var(--main-background-color);
-  background-image: url(/images/cover-image-dark.png);
+  background-color: var(--basic-background-color);
+  background-image: var(--background-image);
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center;
@@ -11,8 +11,6 @@
 }
 
 .header {
-  min-block-size: 668px;
-  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(355px, 1fr);
   grid-template-rows: minmax(228px, 0.92fr) minmax(247px, 1fr) min-content;
@@ -23,33 +21,39 @@
   padding: 10px;
 }
 
-.header::before {
+.decorated-zone {
+  min-block-size: 668px;
+  position: relative;
+}
+
+.decorated-zone::before {
   content: "";
   position: absolute;
   inset-block-start: 10px;
   inset-inline-end: 10px;
   width: 25px;
   height: 25px;
-  border-top: 1px solid #FF0070;
-  border-right: 1px solid #FF0070;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
 }
 
-.header::after {
+.decorated-zone::after {
   content: "";
   position: absolute;
   inset-block-end: 10px;
   inset-inline-start: 10px;
   width: 25px;
   height: 25px;
-  border-left: 1px solid #FF0070;
-  border-bottom: 1px solid #FF0070;
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
 }
 
 .header__decoration {
+  display: var(--display-header-decoration);
   position: absolute;
   inset-block-start: 10px;
   inset-inline-end: 38px;
-  color: #FF0070;
+  color: var(--accent-color);
   text-align: center;
   font-family: IBM Plex Mono;
   font-size: 18px;
@@ -57,7 +61,7 @@
   line-height: 25px; /* 138.889% */
 }
 
-.header__decoration:after {
+.header__decoration::after {
   content: "";
   position: absolute;
   inset-block-start: 8px;
@@ -65,9 +69,9 @@
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  box-shadow: 0 0 4px 2px #FF0070;
-  background-color: #FF0070;
-  border-right: 1px solid #FF0070; 
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
+  border-right: 1px solid var(--accent-color); 
 }
 
 .header__theme-menu {
@@ -87,7 +91,7 @@
   block-size: 26px;
   background-color: transparent;
   border: none;
-  color: #FF0070;
+  color: var(--accent-color);
   display: flex; /* для выравнивания текста по высоте */
   justify-content: center;
   text-transform: lowercase;
@@ -108,27 +112,27 @@
 }
 
 .header__theme-menu-button:active {
-  border: 1px solid #FF0070;
+  border: 1px solid var(--accent-color);
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid #FF0070;
+  border: 1px solid var(--accent-color);
   pointer-events: none;
 }
 
 .header__title {
   grid-area: title;
-  color: #DB00FF;
-  text-shadow: 4px 4px 0px var(--accent-color);
+  color: var(--title-color);
+  text-shadow: 4px 4px 0px var(--accent-background-and-shadow-color);
   font-family: IBM Plex Mono;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: var(--title-size);
   font-weight: 700;
   line-height: 82.5%;
 }
 
 .title-decor {
-  background-color: var(--accent-background-color);
-  color: #000028;
+  background-color: var(--accent-background-and-shadow-color);
+  color: var(--text-color-for-accent-bg);
   font-family: IBM Plex Mono;
   font-size: 18px;
   line-height: 130%;
@@ -136,7 +140,6 @@
 
 .subtitle {
   grid-area: description;
-  color: #000028;
   font-weight: 700;
 }
 
@@ -152,7 +155,7 @@
 }
 
 .content__section-title {
-  color: #FF0070;
+  color: var(--accent-color);
   font-family: IBM Plex Mono;
   font-size: 18px;
   font-weight: 700;
@@ -167,7 +170,7 @@
 }
 
 .content__text {
-  color: #F1B2CE;
+  color: var(--text-color);
   font-family: IBM Plex Mono;
   font-size: 18px;
   font-weight: 400;
@@ -189,44 +192,18 @@
 }
 
 .content__item-title {
-  color: #000028;
   font-weight: 400;
 }
 
 .footer {
-  min-block-size: 668px;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.footer::before {
-  content: "";
-  position: absolute;
-  inset-block-start: 10px;
-  inset-inline-end: 10px;
-  width: 25px;
-  height: 25px;
-  border-top: 1px solid #FF0070;
-  border-right: 1px solid #FF0070;
-}
-
-.footer::after {
-  content: "";
-  position: absolute;
-  inset-block-end: 10px;
-  inset-inline-start: 10px;
-  width: 25px;
-  height: 25px;
-  border-left: 1px solid #FF0070;
-  border-bottom: 1px solid #FF0070;
-}
-
-
 .footer__title {
-  color: #DB00FF;
-  text-shadow: 2px 2px 0px var(--accent-color);
+  color: var(--title-color);
+  text-shadow: 2px 2px 0px var(--accent-background-and-shadow-color);
   font-family: IBM Plex Mono;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;

@@ -3,8 +3,15 @@
   и их переопределение под различные устройства
 */
 :root {
-  --main-background-color: #000028;
-  --accent-background-color: #FF0070;
+  --basic-background-color: #000028;
+  --background-image: url(/images/cover-image-dark.png);
   --accent-color: #FF0070;
+  --accent-background-and-shadow-color: #FF0070;
+  --hover-frame-color: rgba(255, 0, 112, 0.40);
+  --title-color: #DB00FF;
+  --text-color: #F1B2CE;
+  --text-color-for-accent-bg: #000028;
+  --display-header-decoration: block;
+  --title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
 
