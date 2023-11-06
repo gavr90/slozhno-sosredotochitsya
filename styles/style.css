@@ -13,7 +13,7 @@
 .header {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(355px, 1fr);
-  grid-template-rows: minmax(228px, 0.92fr) minmax(247px, 1fr) min-content;
+  grid-template-rows: 1fr min-content 1fr;
   grid-template-areas: 
   "menu menu"
   "title title"
@@ -22,7 +22,7 @@
 }
 
 .decorated-zone {
-  min-block-size: 668px;
+  min-block-size: 100vh;
   position: relative;
 }
 
@@ -141,6 +141,7 @@
 .subtitle {
   grid-area: description;
   font-weight: 700;
+  align-self: center;
 }
 
 .header > .subtitle {
@@ -208,4 +209,8 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 82.5%;
+}
+
+@media (min-width: 768px) {
+  
 }
