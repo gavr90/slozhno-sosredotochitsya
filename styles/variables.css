@@ -13,5 +13,7 @@
   --text-color-for-accent-bg: #000028;
   --display-header-decoration: block;
   --title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --mob10px-to-tab20px: clamp(0.625rem, 0.029rem + 2.545vw, 1.25rem);
+  --mob40px-to-tab60px: clamp(2.5rem, 1.307rem + 5.089vw, 3.75rem);
 }
 
