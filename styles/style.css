@@ -131,7 +131,7 @@
 
 .title-decor {
   background-color: var(--accent-background-and-shadow-color);
-  color: var(--text-color-for-accent-bg);
+  color: var(--text-color-for-accent-background);
 }
 
 .subtitle {

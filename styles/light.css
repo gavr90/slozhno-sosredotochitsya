@@ -16,7 +16,7 @@
   --hover-frame-color: rgba(50, 49, 45, 0.40);
   --title-color: #FFC2E6;
   --text-color: #353430;
-  --text-color-for-accent-bg: #353430;
+  --text-color-for-accent-background: #353430;
   --display-header-decoration: none;
 }
 
@@ -30,7 +30,7 @@
     --hover-frame-color: rgba(50, 49, 45, 0.40);
     --title-color: #FFC2E6;
     --text-color: #353430;
-    --text-color-for-accent-bg: #353430;
+    --text-color-for-accent-background: #353430;
     --display-header-decoration: none;
   }
 }
