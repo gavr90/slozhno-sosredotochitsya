@@ -19,3 +19,18 @@
   --text-color-for-accent-bg: #353430;
   --display-header-decoration: none;
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Дублируем переменные светлой темы */
+    --basic-background-color: #FFF1F7;
+    --background-image: url(/images/cover-image-light.png);
+    --accent-color: #353430;
+    --accent-background-and-shadow-color: #FF8DCB;
+    --hover-frame-color: rgba(50, 49, 45, 0.40);
+    --title-color: #FFC2E6;
+    --text-color: #353430;
+    --text-color-for-accent-bg: #353430;
+    --display-header-decoration: none;
+  }
+}
