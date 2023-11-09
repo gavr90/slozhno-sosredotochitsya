@@ -10,7 +10,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --basic-background-color: #FFF1F7;
-  --background-image: url(/images/cover-image-light.png);
+  --background-image: url(../images/cover-image-light.png);
   --accent-color: #353430;
   --accent-background-and-shadow-color: #FF8DCB;
   --hover-frame-color: rgba(50, 49, 45, 0.40);
@@ -24,7 +24,7 @@
   :root {
     /* Дублируем переменные светлой темы */
     --basic-background-color: #FFF1F7;
-    --background-image: url(/images/cover-image-light.png);
+    --background-image: url(../images/cover-image-light.png);
     --accent-color: #353430;
     --accent-background-and-shadow-color: #FF8DCB;
     --hover-frame-color: rgba(50, 49, 45, 0.40);

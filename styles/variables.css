@@ -4,7 +4,7 @@
 */
 :root {
   --basic-background-color: #000028;
-  --background-image: url(/images/cover-image-dark.png);
+  --background-image: url(../images/cover-image-dark.png);
   --accent-color: #FF0070;
   --accent-background-and-shadow-color: #FF0070;
   --hover-frame-color: rgba(255, 0, 112, 0.40);
@@ -16,4 +16,5 @@
   --mob10px-to-tab20px: clamp(0.625rem, 0.029rem + 2.545vw, 1.25rem);
   --mob40px-to-tab60px: clamp(2.5rem, 1.307rem + 5.089vw, 3.75rem);
   --mob50px-to-tab80px: clamp(3.125rem, 1.336rem + 7.634vw, 5rem);
+  --desktop-gap: 20px;
 }

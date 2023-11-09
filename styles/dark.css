@@ -10,7 +10,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --basic-background-color: #000028;
-  --background-image: url(/images/cover-image-dark.png);
+  --background-image: url(../images/cover-image-dark.png);
   --accent-color: #FF0070;
   --accent-background-and-shadow-color: #FF0070;
   --hover-frame-color: rgba(255, 0, 112, 0.40);
