@@ -10,7 +10,7 @@
   --hover-frame-color: rgba(255, 0, 112, 0.40);
   --title-color: #DB00FF;
   --text-color: #F1B2CE;
-  --text-color-for-accent-bg: #000028;
+  --text-color-for-accent-background: #000028;
   --display-header-decoration: block;
   --title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --mob10px-to-tab20px: clamp(0.625rem, 0.029rem + 2.545vw, 1.25rem);

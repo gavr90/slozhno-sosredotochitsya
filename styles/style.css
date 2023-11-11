@@ -103,7 +103,8 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid --hover-frame-color;
+  border: 1px solid var(--hover-frame-color);
+  cursor: pointer;
 }
 
 .header__theme-menu-button:focus {
@@ -113,7 +114,6 @@
 .header__theme-menu-button:focus-visible {
   outline: none;
   border-bottom: 1px solid var(--accent-color);
-  margin-block-end: -1px;
 }
 
 .header__theme-menu-button:active {
@@ -187,6 +187,7 @@
 
 .link:hover {
   border-bottom: 1px solid var(--text-color);
+  cursor: pointer;
 }
 
 .link:focus {
@@ -317,10 +318,6 @@
     grid-column: 2 / 4;
     grid-row: 4 / 5;
   }
-
-  .content__image {
-    object-fit: cover;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -335,7 +332,6 @@
   }
 
 .content__section {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: var(--desktop-gap);
   }
